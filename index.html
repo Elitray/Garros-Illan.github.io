@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<!--Quelques metas incontournables-->
+		<meta charset="utf-8">
+		<!--Bug Safari 9-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title> Calcul du meilleur itinéraire</title>
+		<!--un favicon trouvé sur internet qui sera également le logo de notre application-->
+		<link rel="shortcut icon"href="data:image/jpeg;base64,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">
+		<!-- Chargement de Bootstrap-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+		<!-- Leaflet.CSS-->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="crossorigin=""/>
+		<!-- Leaflet JS après le CSS-->
+		<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="crossorigin=""></script>
+		<!-- notre feuille de style-->
+		<link rel="stylesheet" href="css/app.css">
+		<!-- notre fichier Javascript-->
+		<script src="js/app.js" async defer></script>
+	</head>
+	<body>
+	<!--Bloc du contenus principal-->
+	<div class="main-content">
+	<!--la barre de navigation( qui ne servira à rien dans notre application-->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  
+		<a class="navbar-brand" href="#">
+			<img
+	src="https://cdn0.iconfinder.com/data/icons/navigation-easy/64/route-map-pointer-way-1024.png" width="30" height="30" alt="">
+		</a>
+		
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Lien 2</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Lien 1</a>
+				</li>
+			</ul>
+		</div>	
+    </nav>
+	<!--conteneur principal-->
+	<div class="container">
+		<!--titre principal-->
+		<h1> Calculez votre itinéraire</h1>
+		<!--message informatif-->
+		<div class="alert alert-secondary" role="alert">
+			Pour trouver votre itinéraire, cliquez sur 2 marqueurs de la carte ou choisissez 2 villes dans les listes de sélection.
+		</div>
+			
+		<div class="row">
+		<!--première colonne: accueillera la carte-->
+			<div class="col-md-8">
+				<!--la carte de France-->
+				<div id="mapid"></div>
+			</div>
+			<!--Deuxième colonne-->
+			<div class="col-md-4">
+				<!--Formulaire pour pouvoir poster nos choix de villes-->
+				<form method="post">
+					<div class="from-group">
+						<label for="villededepart"> Aller de:</label>
+						<select class="form-control" id="villededepart" name="villededepart">
+							<option value="1"> Angers</option>
+						</select>
+						<small id="villeDHelp" class="form-text text-muted"> Choisissez une ville de départ</small>
+					</div>
+					<div class="from-group">
+						<label for="villearrivee"> à:</label>
+						<select class="form-control" id="villearrivee" name="villearrivee">
+							<option value="1"> Angers</option>
+						</select>
+						<small id="villeAHelp" class="form-text text-muted"> Choisissez une ville d'arrivée</small>
+					</div>
+					
+					<button type="submit" class="btn btn-primary btn-block"> Trouver l'itinéraire le plus cout&nbsp; &rarr;</button>
+				</form>
+				<!--Conteneur pour afficher le résultats-->
+				<div class="resultat"></div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!--Pied de page-->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<a href="">@copyright Joachim Lucas 2020</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	</body>
+</html>
